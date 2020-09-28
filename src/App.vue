@@ -10,6 +10,5 @@
     components: {
       Frank
     }
-    
   }
 </script>
