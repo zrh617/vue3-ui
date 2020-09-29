@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <Topnav class="nav"/>
+    <Topnav class="nav" />
     <div class="content">
       <aside v-if="asideVisiable">
         <h2>组件列表</h2>
@@ -20,7 +20,7 @@
         </ol>
       </aside>
       <main>
-      <router-view />
+        <router-view />
       </main>
     </div>
   </div>
@@ -89,6 +89,7 @@
     top: 0;
     left: 0;
     padding-top: 70px;
+    z-index: 9; 
     height: 100%;
 
     >h2 {

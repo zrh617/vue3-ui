@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="topnav">
+      <div class="toggleAside" @click="toggleAside"><span></span></div>
       <div class="logo">LOGO</div>
       <ul class="menu">
         <li>菜单1</li>
         <li>菜单2</li>
       </ul>
-      <span class="toggleAside" @click="toggleAside"></span>
     </div>
   </div>
 </template>
@@ -59,14 +59,27 @@
     }
 
     >.toggleAside {
-      width: 24px;
-      height: 24px;
-      background: red;
-      position: absolute;
+      // width: 24px;
+      // height: 24px;
+      // background: red;
+      // position: absolute;
       left: 16px;
-      top: 50%;
-      transform: translateY(-50%);
+      // top: 50%;
+      // transform: translateY(-50%);
+      z-index: 120;
+      position: absolute;
+      width: 40px;
+      height: 44px;
       display: none;
+
+      span {
+        margin: 14px 0 0 15px;
+        width: 20px;
+        height: 18px;
+        display: block;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAgAgMAAAAdw9KTAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURUdwTP///////////waf0AoAAAADdFJOUwDjSYAlncUAAAAbSURBVBjTY5j/Hwq+MdTDmH+RmUgK6AuGhcsAU5tyB6Ji+x0AAAAASUVORK5CYII=) no-repeat;
+        background-size: 100% 100%;
+      }
     }
 
     @media (max-width: 600px) {
