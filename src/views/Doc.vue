@@ -1,12 +1,12 @@
 <template>
   <div class="layout">
-    <Topnav />
+    <Topnav class="nav"/>
     <div class="content">
       <aside v-if="asideVisiable">
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="/doc/swich">Switch 组件</router-link>
+            <router-link to="/doc/switch">Switch 组件</router-link>
           </li>
           <li>
             <router-link to="/doc/button">Button 组件</router-link>
@@ -19,7 +19,9 @@
           </li>
         </ol>
       </aside>
-      <main>主内容</main>
+      <main>
+      <router-view />
+      </main>
     </div>
   </div>
 </template>
@@ -36,7 +38,7 @@
       Topnav
     },
     setup() {
-      const asideVisiable = inject < Ref < boolean >> ('xxx') // get
+      const asideVisiable = inject < Ref < boolean >> ('asideVisiable') // get
       return {
         asideVisiable
       }
@@ -56,10 +58,10 @@
 
     >.content {
       flex-grow: 1;
-      padding-top: 60px;
-      padding-left: 156px;
+      padding-top: 50px;
+      padding-left: 150px;
 
-      @media (max-width: 500px) {
+      @media (max-width: 600px) {
         padding-left: 0;
       }
     }
@@ -98,9 +100,20 @@
         padding: 4px 0;
       }
     }
+
+    @media (max-width: 600px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 70px;
+    }
+
+    main {
+      overflow: auto;
+    }
   }
 
-  main {
-    overflow: auto;
-  }
+  // main {
+  //   overflow: auto;
+  // }
 </style>

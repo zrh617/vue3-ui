@@ -3,12 +3,24 @@
 </template>
 
 <script lang="ts">
-import { provide, ref } from 'vue'
+  import {
+    provide,
+    ref
+  } from 'vue'
+  import {
+    router
+  } from './router'
   export default {
     name: 'App',
     setup() {
-      const asideVisiable = ref(false)
-      provide('xxx', asideVisiable) // set
+      const width = document.documentElement.clientWidth
+      const asideVisiable = ref(width <= 600 ? false : true)
+      provide('asideVisiable', asideVisiable) // set
+      router.afterEach(() => {
+        if (width <= 600) {
+          asideVisiable.value = false
+        }
+      })
     }
   }
 </script>
