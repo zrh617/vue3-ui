@@ -58,13 +58,13 @@
 
     &:active {
       >span {
-        // width: $h2 + 4px;
+        width: $h2 + 4px;
       }
     }
 
     &.checked:active {
       >span {
-        // width: $h2 + 4px;
+        width: $h2 + 4px;
         margin-left: -4px;
       }
     }
