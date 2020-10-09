@@ -53,13 +53,14 @@
         }
       }
       const ok = () => {
-        if (props.ok ? .() !== false) {
+        if (props.ok?.() !== false) {
           close()
         }
       }
       const cancel = () => {
-        context.emit('cancel')
-        close()
+        if (props.cancel?.() !== false){
+          close()
+        }
       }
       return {
         close,
