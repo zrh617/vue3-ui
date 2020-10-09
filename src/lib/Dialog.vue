@@ -1,22 +1,23 @@
 <template>
   <template v-if="visible">
-    <div class="cloud-dialog-overlay" @click="onClickOverlay"></div>
-    <div class="cloud-dialog-wrapper">
-      <div class="cloud-dialog">
-        <header>
-          标题
-          <span @click="close" class="cloud-dialog-close"></span>
-        </header>
-        <main>
-          <p>第一行</p>
-          <p>第二行</p>
-        </main>
-        <footer>
-          <Button level="main" @click="ok">OK</Button>
-          <Button @click="cancel">Cancel</Button>
-        </footer>
+    <Teleport to="body">
+      <div class="cloud-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="cloud-dialog-wrapper">
+        <div class="cloud-dialog">
+          <header>
+            <slot name="title" />
+            <span @click="close" class="cloud-dialog-close"></span>
+          </header>
+          <main>
+            <slot name="content" />
+          </main>
+          <footer>
+            <Button level="main" @click="ok">OK</Button>
+            <Button @click="cancel">Cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
+    </Teleport>
   </template>
 </template>
 
@@ -52,7 +53,7 @@
         }
       }
       const ok = () => {
-        if(props.ok?.() !== false){
+        if (props.ok ? .() !== false) {
           close()
         }
       }
