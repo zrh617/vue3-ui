@@ -6,9 +6,9 @@
       <div class="cloud-tabs-nav-indicator" ref="indicator"></div>
     </div>
     <div class="cloud-tabs-content">
-      <!--<component class="cloud-tabs-content-item" :class="{selected: c.props.title === selected }" v-for="c in defaults"
-        :is="c" />-->
-        <component :is="current" :key="current.props.title" />
+      <component class="cloud-tabs-content-item" :class="{selected: c.props.title === selected }" v-for="c in defaults"
+        :is="c" />
+       <!-- <component :is="current" :key="current.props.title" />-->
     </div>
   </div>
 </template>
@@ -115,13 +115,13 @@
     &-content {
       padding: 8px 0;
 
-      // &-item {
-      //   display: none;
+      &-item {
+        display: none;
 
-      //   &.selected {
-      //     display: block;
-      //   }
-      // }
+        &.selected {
+          display: block;
+        }
+      }
     }
   }
 </style>

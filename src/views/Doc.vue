@@ -1,8 +1,20 @@
 <template>
   <div class="layout">
-    <Topnav class="nav" />
+    <Topnav toggleMenuVisible class="nav" />
     <div class="content">
       <aside v-if="asideVisiable">
+        <h2>文档</h2>
+        <ol>
+          <li>
+            <router-link to="/doc/intro">介绍</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/install">安装</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/get-started">开始使用</router-link>
+          </li>
+        </ol>
         <h2>组件列表</h2>
         <ol>
           <li>
@@ -77,28 +89,36 @@
     >main {
       flex-grow: 1;
       padding: 16px;
-      background: lightgreen;
     }
   }
 
   aside {
     background: lightblue;
     width: 150px;
-    padding: 16px;
+    padding: 16px 0;
     position: fixed;
     top: 0;
     left: 0;
     padding-top: 70px;
-    z-index: 9; 
+    z-index: 9;
     height: 100%;
 
     >h2 {
       margin-bottom: 4px;
+      padding: 0 16px;
     }
 
     >ol {
       >li {
-        padding: 4px 0;
+        >a {
+          display: block;
+          padding: 4px 16px;
+          text-decoration: none;
+        }
+
+        .router-link-active {
+          background: white;
+        }
       }
     }
 

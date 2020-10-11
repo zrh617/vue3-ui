@@ -1,12 +1,17 @@
 <template>
   <div>
     <div class="topnav">
-      <div class="toggleAside" @click="toggleAside"><span></span></div>
-      <div class="logo">LOGO</div>
+      <router-link to="/" class="logo">
+        <svg class="icon">
+          <use xlink:href="#icon-yun"></use>
+        </svg>
+      </router-link>
       <ul class="menu">
-        <li>菜单1</li>
-        <li>菜单2</li>
+        <li>
+          <router-link to="/doc/intro">文档</router-link>
+        </li>
       </ul>
+      <div class="toggleAside" @click="toggleAside" v-if="toggleMenuVisible"><span></span></div>
     </div>
   </div>
 </template>
@@ -18,6 +23,12 @@
   } from 'vue'
   export default {
     name: 'Topnav',
+    props: {
+      toggleMenuVisible: {
+        type: Boolean,
+        default: false
+      }
+    },
     setup() {
       const asideVisiable = inject < Ref < boolean >> ('asideVisiable') // get
       const toggleAside = () => {
@@ -31,8 +42,10 @@
 </script>
 
 <style lang="scss" scoped>
+  $color: #007974;
+
   .topnav {
-    background: pink;
+    color: $color;
     display: flex;
     padding: 16px;
     position: fixed;
@@ -46,6 +59,16 @@
     >.logo {
       max-width: 6em;
       margin-right: auto;
+      padding-left: 0px;
+
+      @media (max-width: 600px) {
+        padding-left: 0;
+      }
+
+      >svg {
+        width: 32px;
+        height: 32px;
+      }
     }
 
     >.menu {
@@ -59,21 +82,16 @@
     }
 
     >.toggleAside {
-      // width: 24px;
-      // height: 24px;
-      // background: red;
-      // position: absolute;
       left: 16px;
-      // top: 50%;
-      // transform: translateY(-50%);
       z-index: 120;
       position: absolute;
       width: 40px;
       height: 44px;
       display: none;
+      background: fade-out(black, 0.9);
 
       span {
-        margin: 14px 0 0 15px;
+        margin: 14px 0 0 10px;
         width: 20px;
         height: 18px;
         display: block;
