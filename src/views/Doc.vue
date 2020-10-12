@@ -31,7 +31,7 @@
           </li>
         </ol>
       </aside>
-      <main>
+      <main style="width:100%">
         <router-view />
       </main>
     </div>
@@ -133,8 +133,4 @@
       overflow: auto;
     }
   }
-
-  // main {
-  //   overflow: auto;
-  // }
 </style>

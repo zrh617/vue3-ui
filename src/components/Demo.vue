@@ -34,6 +34,7 @@ export default {
     const html = computed(() => {
       return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html')
     })
+    console.log(html);
     const toggleCode = () => codeVisible.value = !codeVisible.value
     const codeVisible = ref(false)
     return {
