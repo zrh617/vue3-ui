@@ -3,7 +3,7 @@
     <Topnav />
     <div class="banner">
       <h1>Cloud UI</h1>
-      <h2>一个厉害的 UI 框架</h2>
+      <h2>一个面向学习者的 UI 框架</h2>
       <p class="actions">
         <a href="https://github.com/zrh617/Cloud-UI">GitHub</a>
         <router-link to="/doc/get-started">开始</router-link>
