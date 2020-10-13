@@ -8,7 +8,7 @@
     <div class="cloud-tabs-content">
       <component class="cloud-tabs-content-item" :class="{selected: c.props.title === selected }" v-for="c in defaults"
         :is="c" />
-       <!-- <component :is="current" :key="current.props.title" />-->
+      <!--<component :is="current" :key="current.props.title" />-->
     </div>
   </div>
 </template>
@@ -49,7 +49,9 @@
       })
       const defaults = context.slots.default()
       defaults.forEach((tag) => {
-        if (tag.type !== Tab) {
+        // if (tag.type !== Tab) {
+        // @ts-ignore
+        if (tag.type.name !== Tab.name) {
           throw new Error('Tabs 子标签必须是 Tab')
         }
       })

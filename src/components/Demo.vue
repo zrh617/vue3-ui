@@ -1,15 +1,16 @@
 <template>
-<div class="demo">
-  <h2>{{component.__sourceCodeTitle}}</h2>
-  <div class="demo-component">
-    <component :is="component" />
-  </div>
-  <div class="demo-actions">
-    <Button @click="toggleCode">查看代码</Button>
-  </div>
-  <div class="demo-code" v-if="codeVisible">
-    <pre class="language-html" v-html="html" />
-  </div>
+  <div class="demo">
+    <h2>{{component.__sourceCodeTitle}}</h2>
+    <div class="demo-component">
+      <component :is="component" />
+    </div>
+    <div class="demo-actions">
+      <Button @click="hideCode" v-if="codeVisible">隐藏代码</Button>
+      <Button @click="showCode" v-else>查看代码</Button>
+    </div>
+    <div class="demo-code" v-if="codeVisible">
+      <pre class="language-html" v-html="html" />
+      </div>
 
 </div>
 </template>
@@ -35,13 +36,15 @@ export default {
       return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html')
     })
     console.log(html);
-    const toggleCode = () => codeVisible.value = !codeVisible.value
+    const showCode = () => codeVisible.value = true
+    const hideCode = () => codeVisible.value = false
     const codeVisible = ref(false)
     return {
       Prism,
       html,
       codeVisible,
-      toggleCode
+      showCode,
+      hideCode
     }
   }
 }

@@ -4,7 +4,8 @@
 然后在你的代码中写入下面的代码
 
 ```
-import {Button, Tabs, Switch, Dialog} from "cloud-ui"
+import {Button, Tabs, Switch, Dialog} from "cloud-ui-1"
+import 'cloud-ui-1/dist/lib/cloud.css'
 ```
 
 就可以使用我提供的组件了。
@@ -20,7 +21,7 @@ import {Button, Tabs, Switch, Dialog} from "cloud-ui"
   </div>
 </template>
 <script>
-import {Button, Tabs, Switch, Dialog} from "cloud-ui"
+import {Button, Tabs, Switch, Dialog} from "cloud-ui-1"
 export default {
   components: {Button}
 }
