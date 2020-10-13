@@ -6,9 +6,7 @@
       <div class="cloud-tabs-nav-indicator" ref="indicator"></div>
     </div>
     <div class="cloud-tabs-content">
-      <component class="cloud-tabs-content-item" :class="{selected: c.props.title === selected }" v-for="c in defaults"
-        :is="c" />
-      <!--<component :is="current" :key="current.props.title" />-->
+      <component :is="current" :key="current.props.title" />
     </div>
   </div>
 </template>
@@ -45,6 +43,8 @@
           } = selectedItem.value.getBoundingClientRect()
           const left = left2 - left1
           indicator.value.style.left = left + 'px'
+        }, {
+          flush: 'post'
         })
       })
       const defaults = context.slots.default()
@@ -116,14 +116,6 @@
 
     &-content {
       padding: 8px 0;
-
-      &-item {
-        display: none;
-
-        &.selected {
-          display: block;
-        }
-      }
     }
   }
 </style>

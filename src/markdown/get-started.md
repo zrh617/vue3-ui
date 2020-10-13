@@ -22,6 +22,7 @@ import 'cloud-ui-1/dist/lib/cloud.css'
 </template>
 <script>
 import {Button, Tabs, Switch, Dialog} from "cloud-ui-1"
+import 'cloud-ui-1/dist/lib/cloud.css'
 export default {
   components: {Button}
 }
