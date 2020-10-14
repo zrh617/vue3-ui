@@ -59,6 +59,7 @@
   $blue: #40a9ff;
   $radius: 4px;
   $red: red;
+  $yellow: yellow;
   $grey: grey;
 
   .cloud-button {
@@ -143,6 +144,18 @@
         }
       }
 
+      &.cloud-level-warning {
+        background: $yellow;
+        border-color: $yellow;
+        color: white;
+
+        &:hover,
+        &:focus {
+          background: darken($yellow, 10%);
+          border-color: darken($yellow, 10%);
+        }
+      }
+
       &.cloud-level-danger {
         background: $red;
         border-color: $red;
@@ -157,6 +170,15 @@
     }
 
     &.cloud-theme-link {
+      &.cloud-level-warning {
+        color: $yellow;
+
+        &:hover,
+        &:focus {
+          color: darken($yellow, 10%);
+        }
+      }
+
       &.cloud-level-danger {
         color: $red;
 
@@ -175,6 +197,15 @@
         &:hover,
         &:focus {
           color: darken($blue, 10%);
+        }
+      }
+
+      &.cloud-level-warning {
+        color: $yellow;
+
+        &:hover,
+        &:focus {
+          color: darken($yellow, 10%);
         }
       }
 
