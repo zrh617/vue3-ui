@@ -5,7 +5,7 @@ git init &&
 git add . &&
 git commit -m "update" &&
 git branch -M master &&
-git remote add origin git@github.com:zrh617/cloud-ui-website.git &&
+git remote add origin git@gitee.com:zrh0617/cloud-ui-website.git &&
 git push -f -u origin master &&
 cd -
-echo https://zrh617.github.io/cloud-ui-website/
+echo https://zrh0617.gitee.io/cloud-ui-website

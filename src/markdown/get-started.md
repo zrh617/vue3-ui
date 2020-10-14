@@ -4,7 +4,7 @@
 然后在你的代码中写入下面的代码
 
 ```
-import {Button, Tabs, Switch, Dialog} from "cloud-ui-1"
+import {Button, Tabs, Tab, Switch, Dialog, openDialog} from "cloud-ui-1"
 import 'cloud-ui-1/dist/lib/cloud.css'
 ```
 
@@ -21,7 +21,7 @@ import 'cloud-ui-1/dist/lib/cloud.css'
   </div>
 </template>
 <script>
-import {Button, Tabs, Switch, Dialog} from "cloud-ui-1"
+import {Button, Tabs, Tab, Switch, Dialog, openDialog} from "cloud-ui-1"
 import 'cloud-ui-1/dist/lib/cloud.css'
 export default {
   components: {Button}
