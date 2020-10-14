@@ -8,7 +8,7 @@
       </router-link>
       <ul class="menu">
         <li>
-          <router-link to="/doc/intro">文档</router-link>
+          <router-link to="/doc/switch">文档</router-link>
         </li>
       </ul>
       <div class="toggleAside" @click="toggleAside" v-if="toggleMenuVisible"><span></span></div>

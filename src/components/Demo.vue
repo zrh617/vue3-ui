@@ -35,7 +35,6 @@ export default {
     const html = computed(() => {
       return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html')
     })
-    console.log(html);
     const showCode = () => codeVisible.value = true
     const hideCode = () => codeVisible.value = false
     const codeVisible = ref(false)
