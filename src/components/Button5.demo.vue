@@ -1,5 +1,5 @@
 <demo>
-  支持显示加载中
+  支持 loading
 </demo>
 <template>
   <div>

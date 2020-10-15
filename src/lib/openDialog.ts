@@ -1,7 +1,7 @@
 import Dialog from './Dialog.vue'
 import { createApp, h } from 'vue'
 export const openDialog = (options) => {
-  const { title, content, ok, cancel } = options
+  const { title, content, closeOnClickOverlay, ok, cancel } = options
   const div = document.createElement('div')
   document.body.appendChild(div)
   const close = () => {
@@ -19,7 +19,8 @@ export const openDialog = (options) => {
           }
         },
         ok,
-        cancel
+        cancel,
+        closeOnClickOverlay
       }, {
         title, content
       })

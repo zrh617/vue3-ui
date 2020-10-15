@@ -1,5 +1,5 @@
 <demo>
-  一键打开 Dialog
+  通过按钮打开 Dialog
 </demo>
 <template>
   <div>
@@ -25,6 +25,7 @@
         openDialog({
           title: h('strong', {}, '标题'),
           content: '你好',
+          closeOnClickOverlay: false,
           ok() {
             console.log('ok')
           },

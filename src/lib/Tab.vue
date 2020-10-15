@@ -6,6 +6,12 @@
 
 <script lang="ts">
   export default {
-    name: 'CloudTab'
+    name: 'CloudTab',
+    props: {
+      disabled: {
+        type: Boolean,
+        default: false
+      },
+    },
   }
 </script>

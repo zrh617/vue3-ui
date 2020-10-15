@@ -89,10 +89,10 @@
         width: $h*2;
         &>.cloud-ball {
             height: $h2 - 5px;
-            width: $h2 - 2px;
+            width: $h2 - 3px;
         }
         &.cloud-checked>.cloud-ball {
-            left: calc(100% - #{$h2});
+            left: calc(100% - #{$h2} + 1px);
         }
         &:active:not(.cloud-disabled)>.cloud-ball {
             width: $h2 + 4px;
@@ -103,16 +103,16 @@
     }
 
     &.cloud-size-small {
-        $h: $h - 6px;
+        $h: $h - 5.5px;
         $h2: $h - 4px;
         height: $h;
         width: $h*2;
         &>.cloud-ball {
-            height: $h2 - 1px;
+            height: $h2;
             width: $h2;
         }
         &.cloud-checked>.cloud-ball {
-            left: calc(100% - #{$h2} - 1px);
+            left: calc(100% - #{$h2} - 3px);
         }
         &:active:not(.cloud-disabled)>.cloud-ball {
             width: $h2 + 4px;
