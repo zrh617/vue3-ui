@@ -152,12 +152,12 @@
 
     &.cloud-theme-button {
       &.cloud-level-main {
-        background: $blue;
-        color: $blue;
+        background: $primary;
+        color: white;
         border-color: $blue;
 
         & {
-          background: #fff;
+          background: #40a9ff;
           box-shadow: 0 0 0 6px rgba($primary, 0);
         }
 
@@ -168,7 +168,6 @@
 
         &:hover,
         &:focus {
-          color: fade-out($color: $primary, $amount: 0);
           border: 1px solid fade-out($color: $primary, $amount: 0.5);
         }
       }
@@ -176,10 +175,10 @@
       &.cloud-level-warning {
         background: $yellow;
         border-color: $yellow;
-        color: $yellow;
+        color: white;
 
         & {
-          background: #fff;
+          background: $warning;
           box-shadow: 0 0 0 6px rgba($warning, 0);
         }
 
@@ -190,7 +189,6 @@
 
         &:hover,
         &:focus {
-          color: fade-out($color: $warning, $amount: 0);
           border: 1px solid fade-out($color: $warning, $amount: 0.5);
         }
       }
@@ -198,21 +196,20 @@
       &.cloud-level-danger {
         background: $red;
         border-color: $red;
-        color: $red;
+        color: white;
 
         & {
-          background: #fff;
+          background: $danger;
           box-shadow: 0 0 0 6px rgba($danger, 0);
         }
 
         &:active {
           transition: none;
-          box-shadow: 0 0 0 0 rgba($danger, 0.5);
+          box-shadow: 0 0 0 0 rgba($red, 0.5);
         }
 
         &:hover,
         &:focus {
-          color: fade-out($color: $danger, $amount: 0);
           border: 1px solid fade-out($color: $danger, $amount: 0.5);
         }
       }
@@ -220,7 +217,7 @@
 
     &.cloud-theme-link {
       &.cloud-level-warning {
-        color: $yellow;
+        color: $warning;
 
         &:hover,
         &:focus {
@@ -250,7 +247,7 @@
       }
 
       &.cloud-level-warning {
-        color: $yellow;
+        color: $warning;
 
         &:hover,
         &:focus {

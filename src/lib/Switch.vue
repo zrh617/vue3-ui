@@ -88,7 +88,7 @@
         height: $h;
         width: $h*2;
         &>.cloud-ball {
-            height: $h2 - 5px;
+            height: $h2 - 4px;
             width: $h2 - 3px;
         }
         &.cloud-checked>.cloud-ball {
@@ -112,7 +112,7 @@
             width: $h2;
         }
         &.cloud-checked>.cloud-ball {
-            left: calc(100% - #{$h2} - 3px);
+            left: calc(100% - #{$h2} - 2px);
         }
         &:active:not(.cloud-disabled)>.cloud-ball {
             width: $h2 + 4px;
