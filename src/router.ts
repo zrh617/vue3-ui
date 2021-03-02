@@ -5,6 +5,7 @@ import Switch from './components/Switch.vue'
 import Button from './components/Button.vue'
 import Dialog from './components/Dialog.vue'
 import Tabs from './components/Tabs.vue'
+import Select from './components/Select.vue'
 import { h } from 'vue';
 import Markdown from './components/Markdown.vue';
 import intro from './markdown/intro.md'
@@ -26,7 +27,8 @@ export const router = createRouter({
         { path: 'switch', component: Switch },
         { path: 'button', component: Button },
         { path: 'dialog', component: Dialog },
-        { path: 'tabs', component: Tabs }
+        { path: 'tabs', component: Tabs },
+        { path: 'select', component: Select }
       ]
     },
   ]

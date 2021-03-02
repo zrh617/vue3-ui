@@ -10,6 +10,7 @@
     ref
   } from 'vue'
   export default {
+    name: 'Switch',
     props: {
       value: Boolean,
       size: {

@@ -21,6 +21,7 @@
     onMounted
   } from 'vue'
   export default {
+    name: 'Tabs',
     props: {
       selected: {
         type: String
