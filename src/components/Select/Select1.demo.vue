@@ -3,7 +3,7 @@
 </demo>
 <template>
   <div>
-    <select :data="data" :currentIndex="curIdx" :callback="setOption">默认选择器</select>
+    <Select :data="data" :currentIndex="curIdx" :callback="setOption"></Select>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ import { ref } from 'vue'
 
 export default {
   setup() {
-    const curIdx = ref(1);
+    const curIdx = ref(0);
 
     const data = [
       {

@@ -71,7 +71,7 @@
     height: $h;
     padding: 12px 12px;
     cursor: pointer;
-    display: inline-flex;
+    //display: inline-flex;
     justify-content: center;
     align-items: center;
     white-space: nowrap;

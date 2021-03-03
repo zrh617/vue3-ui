@@ -84,10 +84,10 @@
     }
 
     &.cloud-size-big {
-        $h: $h + 3px;
-        $h2: $h;
+        $h: $h + 5px;
+        $h2: $h ;
         height: $h;
-        width: $h*2;
+        width: $h*2.2;
         &>.cloud-ball {
             height: $h2 - 4px;
             width: $h2 - 3px;
@@ -96,10 +96,10 @@
             left: calc(100% - #{$h2} + 1px);
         }
         &:active:not(.cloud-disabled)>.cloud-ball {
-            width: $h2 + 4px;
+            width: $h2;
         }
         &.cloud-checked:active:not(.cloud-disabled)>.cloud-ball {
-            left: calc(100% - #{$h2} - 6px);
+            left: calc(100% - #{$h2} - 3px);
         }
     }
 

@@ -1,5 +1,5 @@
 <demo>
-  通过按钮打开 Dialog
+  自定义 Dialog 模板
 </demo>
 <template>
   <div>
@@ -12,9 +12,13 @@
     ref,
     h
   } from 'vue'
+  import {
+    openDialog
+  } from '../../lib/index'
   export default {
     setup() {
       const showDialog = () => {
+        console.log(openDialog);
         openDialog({
           title: h('strong', {}, '标题'),
           content: '你好',

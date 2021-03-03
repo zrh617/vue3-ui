@@ -4,7 +4,7 @@ import Select  from './Select.vue';
 import Tabs  from './Tabs.vue';
 import Tab  from './Tab.vue';
 import Dialog  from './Dialog.vue';
-import {openDialog} from './openDialog';
+export { openDialog as openDialog } from './openDialog';
 
 const COMPONENTS = [
   Switch,
@@ -12,8 +12,7 @@ const COMPONENTS = [
   Select,
   Tabs,
   Tab,
-  Dialog,
-  openDialog
+  Dialog
 ]
 
 const CloudUI = {
