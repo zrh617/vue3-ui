@@ -18,7 +18,6 @@
   export default {
     setup() {
       const showDialog = () => {
-        console.log(openDialog);
         openDialog({
           title: h('strong', {}, '标题'),
           content: '你好',
