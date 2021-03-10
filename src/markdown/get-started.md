@@ -18,7 +18,6 @@ app.use(CloudUI)
 import {CloudButton, CloudSwitch} from "cloud-ui-1"
 import 'cloud-ui-1/dist/lib/cloud.css'
 const app = createApp(App)
-app.mount('#app')
 app.use(CloudButton)
 app.use(CloudSwitch)
 ```
