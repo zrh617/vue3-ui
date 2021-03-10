@@ -10,7 +10,7 @@
     computed
   } from 'vue'
   export default {
-    name: 'Button',
+    name: 'cloud-button',
     props: {
       theme: {
         type: String,

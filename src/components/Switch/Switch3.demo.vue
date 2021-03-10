@@ -3,11 +3,11 @@
 </demo>
 <template>
   <div>大开关</div>
-  <Switch v-model:value="bool1" size="big" />
+  <cloud-switch v-model:value="bool1" size="big" />
   <div>普通开关</div>
-  <Switch v-model:value="bool2" />
+  <cloud-switch v-model:value="bool2" />
   <div>小开关</div>
-  <Switch v-model:value="bool3" size="small" />
+  <cloud-switch v-model:value="bool3" size="small" />
 </template>
 
 <script lang="ts">

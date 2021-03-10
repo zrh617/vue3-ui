@@ -21,7 +21,7 @@
     onMounted
   } from 'vue'
   export default {
-    name: 'Tabs',
+    name: 'cloud-tabs',
     props: {
       selected: {
         type: String
@@ -70,10 +70,9 @@
         } : obj, {})
       const defaults = context.slots.default()
       defaults.forEach((tag) => {
-        // if (tag.type !== Tab) {
         // @ts-ignore
         if (tag.type.name !== Tab.name) {
-          throw new Error('Tabs 子标签必须是 Tab')
+          throw new Error('cloud-tabs 子标签必须是 cloud-tab')
         }
       })
       const current = computed(() => {

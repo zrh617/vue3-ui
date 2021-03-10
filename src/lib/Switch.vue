@@ -10,7 +10,7 @@
     ref
   } from 'vue'
   export default {
-    name: 'Switch',
+    name: 'cloud-switch',
     props: {
       value: Boolean,
       size: {

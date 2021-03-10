@@ -6,7 +6,7 @@
 
 <script lang="ts">
   export default {
-    name: 'Tab',
+    name: 'cloud-tab',
     props: {
       disabled: {
         type: Boolean,

@@ -4,10 +4,10 @@
 
 <template>
   <div>禁用开关</div>
-  <Switch v-model:value="bool1" disabled />
+  <cloud-switch v-model:value="bool1" disabled />
   <div>通过按钮控制开关是否禁用</div>
-  <Switch v-model:value="bool2" :disabled="disabled" />
-  <Button level="main" @click="toggleDisabled" style="margin: 5px 10px">Toggle Disable</Button>
+  <cloud-switch v-model:value="bool2" :disabled="disabled" />
+  <cloud-button level="main" @click="toggleDisabled" style="margin: 5px 10px">Toggle Disable</cloud-button>
 </template>
 
 <script lang="ts">

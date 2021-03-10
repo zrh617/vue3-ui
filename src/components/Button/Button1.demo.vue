@@ -3,9 +3,9 @@
 </demo>
 <template>
   <div>
-    <Button>默认按钮</Button>
-    <Button theme="link">链接按钮</Button>
-    <Button theme="text">文本按钮</Button>
+    <cloud-button>默认按钮</cloud-button>
+    <cloud-button theme="link">链接按钮</cloud-button>
+    <cloud-button theme="text">文本按钮</cloud-button>
   </div>
 </template>
 

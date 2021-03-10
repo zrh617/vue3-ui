@@ -3,13 +3,12 @@
 </demo>
 <template>
   <div>
-    <Button @click="showDialog">打开对话框</Button>
+    <cloud-button @click="showDialog">打开对话框</cloud-button>
   </div>
 </template>
 
 <script lang="ts">
   import {
-    ref,
     h
   } from 'vue'
   import {

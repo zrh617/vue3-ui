@@ -3,7 +3,7 @@
 </demo>
 
 <template>
-  <Switch v-model:value="bool" />
+  <cloud-switch v-model:value="bool" />
 </template>
 
 <script lang="ts">

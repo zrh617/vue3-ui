@@ -3,8 +3,8 @@
 </demo>
 <template>
   <div>
-    <Button loading>加载中</Button>
-    <Button>加载完毕</Button>
+    <cloud-button loading>加载中</cloud-button>
+    <cloud-button>加载完毕</cloud-button>
   </div>
 </template>
 

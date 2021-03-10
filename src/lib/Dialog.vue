@@ -12,8 +12,8 @@
             <slot name="content" />
           </main>
           <footer>
-            <Button level="main" @click="onClickOK">OK</Button>
-            <Button @click="onClickCancel">Cancel</Button>
+            <cloud-button level="main" @click="onClickOK">OK</cloud-button>
+            <cloud-button @click="onClickCancel">Cancel</cloud-button>
           </footer>
         </div>
       </div>
@@ -22,9 +22,8 @@
 </template>
 
 <script lang="ts">
-  import Button from './Button.vue'
   export default {
-    name: 'Dialog',
+    name: 'cloud-dialog',
     props: {
       visible: {
         type: Boolean,
@@ -40,9 +39,6 @@
       cancel: {
         type: Function
       }
-    },
-    components: {
-      Button
     },
     setup(props, context) {
       const close = () => {

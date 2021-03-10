@@ -4,19 +4,19 @@
 <template>
   <div>
     <div class="box">
-      <Button size="big">大按钮</Button>
-      <Button>普通按钮</Button>
-      <Button size="small">小按钮</Button>
+      <cloud-button size="big">大按钮</cloud-button>
+      <cloud-button>普通按钮</cloud-button>
+      <cloud-button size="small">小按钮</cloud-button>
     </div>
     <div class="box">
-      <Button theme="link" size="big">大按钮</Button>
-      <Button theme="link">普通按钮</Button>
-      <Button size="small" theme="link">小按钮</Button>
+      <cloud-button theme="link" size="big">大按钮</cloud-button>
+      <cloud-button theme="link">普通按钮</cloud-button>
+      <cloud-button size="small" theme="link">小按钮</cloud-button>
     </div>
     <div class="box">
-      <Button size="big" theme="text">大按钮</Button>
-      <Button theme="text">普通按钮</Button>
-      <Button size="small" theme="text">小按钮</Button>
+      <cloud-button size="big" theme="text">大按钮</cloud-button>
+      <cloud-button theme="text">普通按钮</cloud-button>
+      <cloud-button size="small" theme="text">小按钮</cloud-button>
     </div>
   </div>
 </template>

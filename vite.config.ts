@@ -1,5 +1,6 @@
-// @ts-nocheck
+// @ts-ignore
 import { md } from "./plugins/md";
+// @ts-ignore
 import fs from 'fs'
 import { baseParse } from '@vue/compiler-core'
 

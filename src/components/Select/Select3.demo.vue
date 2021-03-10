@@ -3,7 +3,7 @@
 </demo>
 <template>
   <div>
-    <Select :data="data" :currentIndex="curIdx" :disable="true"></Select>
+    <cloud-select :data="data" :currentIndex="curIdx" :disable="true"></cloud-select>
   </div>
 </template>
 

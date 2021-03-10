@@ -1,5 +1,6 @@
 import Dialog from './Dialog.vue'
 import { createApp, h } from 'vue'
+import CloudUI from './index';
 export const openDialog = (options) => {
   const { title, content, closeOnClickOverlay, ok, cancel } = options
   const div = document.createElement('div')
@@ -26,5 +27,6 @@ export const openDialog = (options) => {
       })
     }
   })
+  app.use(CloudUI)
   app.mount(div)
 }

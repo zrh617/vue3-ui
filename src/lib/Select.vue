@@ -34,10 +34,10 @@
 </template>
 
 <script lang="ts">
-import { reactive, toRefs, watch } from 'vue';
+import { reactive, toRefs } from 'vue';
 
 export default {
-  name: 'Select',
+  name: 'cloud-select',
   props: {
     data: Array,
     currentIndex: {
@@ -70,10 +70,6 @@ export default {
       state.optionsShow = false;
       props.callback(index, item);
     }
-
-    watch(() => state.optionsShow, () => {
-
-    })
 
     const openOptions = () => {
       state.optionsShow = !state.optionsShow;
